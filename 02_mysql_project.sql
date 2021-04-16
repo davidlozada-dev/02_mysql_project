@@ -258,7 +258,9 @@ SET SQL_MODE=@OLDTMP_SQL_MODE;
 -- Dumping structure for view 02_mysql_project.bills_view
 -- Removing temporary table and create final VIEW structure
 DROP TABLE IF EXISTS `bills_view`;
-CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `bills_view` AS select `o`.`id_ord` AS `Order's ID`,`o`.`quantity_ord` AS `Units`,`o`.`date_ord` AS `Date of Purchase`,`k`.`name_cli` AS `Client's Full Name`,`c`.`model_car` AS `Car's Model`,`c`.`manufacturer_car` AS `Car's Manufacturer`,`c`.`price_car` AS `Car's Price`,`k`.`payment_cli` AS `Client's Payment` from ((`orders` `o` join `cars` `c` on((`o`.`id_car` = `c`.`id_car`))) join `clients` `k` on((`o`.`id_cli` = `k`.`id_cli`)));
+CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `bills_view` AS select `o`.`id_ord` AS `Order's ID`,`o`.`quantity_ord` AS `Units`,
+`o`.`date_ord` AS `Date of Purchase`,`k`.`name_cli` AS `Client's Full Name`,`c`.`model_car` AS `Car's Model`,`c`.`manufacturer_car` AS `Car's Manufacturer`,
+`c`.`price_car` AS `Car's Price`,`k`.`payment_cli` AS `Client's Payment` from ((`orders` `o` join `cars` `c` on((`o`.`id_car` = `c`.`id_car`))) join `clients` `k` on((`o`.`id_cli` = `k`.`id_cli`)));
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
