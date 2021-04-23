@@ -46,14 +46,16 @@ The 2nd schema show the tables thar are not related with each other in the datab
 
 The *01_backup_trigger_cars* is a trigger that makes a copy of the record from the __cars table__ in the __cars_backup table__ before it is deleted.
 
-```
+```SQL
 DELIMITER //
+
 CREATE TRIGGER 01_backup_trigger_cars BEFORE DELETE ON cars FOR EACH ROW 
 BEGIN
 INSERT INTO cars_backup VALUES(
 old.id_car, old.model_car, old.manufacturer_car, old.price_car, old.stock_car
 );
 END//
+
 DELIMITER ;
 ```
 ---
@@ -62,14 +64,16 @@ DELIMITER ;
 
 The *02_backup_trigger_orders* is a trigger that makes a copy of the record from the __orders table__ in the __orders_backup table__ before it is deleted.
 
-```
+```SQL
 DELIMITER //
+
 CREATE TRIGGER 02_backup_trigger_orders BEFORE DELETE ON orders FOR EACH ROW
 BEGIN
 INSERT INTO orders_backup VALUES(
 old.id_ord, old.id_cli, old.id_car, old.quantity_ord, old.date_ord
 );
 END//
+
 DELIMITER ;
 ```
 ---
@@ -78,14 +82,16 @@ DELIMITER ;
 
 The *03_backup_trigger_clients* is a trigger that makes a copy of the record from the __clients table__ in the __clients_backup table__ before it is deleted.
 
-```
+```SQL
 DELIMITER //
+
 CREATE TRIGGER 03_backup_trigger_clients BEFORE DELETE ON clients FOR EACH ROW
 BEGIN
 INSERT INTO clients_backup VALUES(
 old.id_cli, old.id_sel, old.name_cli, old.city_cli, old.payment_cli
 );
 END//
+
 DELIMITER ;
 ```
 ---
@@ -94,14 +100,16 @@ DELIMITER ;
 
 The *04_backup_trigger_sellers* is a trigger that makes a copy of the record from the __sellers table__ in the __sellers_backup table__ before it is deleted.
 
-```
+```SQL
 DELIMITER //
+
 CREATE TRIGGER 04_backup_trigger_sellers BEFORE DELETE ON sellers FOR EACH ROW
 BEGIN
 INSERT INTO sellers_backup VALUES(
 old.id_sel, old.id_gro, old.name_sel, old.surname_sel, old.charge_sel, old.salary_sel, old.commissionForSales_sel, old.manager_sel, old.hiringDate_sel
 );
 END//
+
 DELIMITER ;
 ```
 ---
@@ -110,14 +118,16 @@ DELIMITER ;
 
 The *05_backup_trigger_groups* is a trigger that makes a copy of the record from the __groups table__ in the __groups_backup table__ before it is deleted.
 
-```
+```SQL
 DELIMITER //
+
 CREATE TRIGGER 05_backup_trigger_groups BEFORE DELETE ON groups FOR EACH ROW
 BEGIN
 INSERT INTO groups_backup VALUES(
 old.id_gro, old.name_gro, old.country_gro
 );
 END//
+
 DELIMITER ;
 ```
 ---
@@ -126,14 +136,16 @@ DELIMITER ;
 
 The *stop_order_making_trigger* is a trigger that prevents making an order if the car model is out of stock, at the same time it shows an error message.
 
-```
+```SQL
 DELIMITER //
+
 CREATE TRIGGER stop_order_making_trigger BEFORE INSERT ON orders FOR EACH ROW
 BEGIN 
 SET @stock = (SELECT stock_car FROM cars WHERE id_car = new.id_car);
 IF @stock = 0 THEN signal sqlstate '45000' SET message_text = 'You can\'t order this car because its stock is empty, please try other model';
 END IF;
 END//
+
 DELIMITER ;
 ```
 ---
@@ -142,12 +154,14 @@ DELIMITER ;
 
 The *update_stock_trigger* is a trigger that updates the quantity available in stock of a car model once an order is made.
 
-```
+```SQL
 DELIMITER //
+
 CREATE TRIGGER update_stock_trigger BEFORE INSERT ON orders FOR EACH ROW
 BEGIN
 UPDATE cars SET cars.stock_car = cars.stock_car - new.quantity_ord WHERE cars.id_car = new.id_car;
 END//
+
 DELIMITER ;
 ```
 ---
@@ -158,7 +172,7 @@ DELIMITER ;
 
 The *bills_view* shows the basic bill information using the data stored in the __cars__, __clients__ and __orders__ tables
 
-```
+```SQL
 DROP TABLE IF EXISTS `bills_view`;
 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `bills_view` AS select `o`.`id_ord` AS `Order's ID`,`o`.`quantity_ord` AS `Units`,
 `o`.`date_ord` AS `Date of Purchase`,`k`.`name_cli` AS `Client's Full Name`,`c`.`model_car` AS `Car's Model`,`c`.`manufacturer_car` AS `Car's Manufacturer`,
