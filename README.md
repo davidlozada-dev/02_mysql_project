@@ -6,7 +6,7 @@
 
 	1.[Motivation behind the project](#11-Motivation-behind-the-project)
 
-	2.[Database schemes](#12-Database-schemes )
+	2.[Database schemas](#12-Database-schemas )
 
 1. [Technical aspects](#2-Technical-aspects)
 
@@ -27,16 +27,16 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui of
 
-### 1.2 Database schemes 
+### 1.2 Database schemas 
 #### Related tables
-The 1st scheme shows the tables that are in the database and how they are related to each other through one-to-many relationships.
+The 1st schema shows the tables that are in the database and how they are related to each other through one-to-many relationships.
 
-![01 scheme](https://raw.githubusercontent.com/davidlozada-dev/02_mysql_project/master/img/02_MySQL_Project_DB_Scheme_01.png)
+![01 schema](https://raw.githubusercontent.com/davidlozada-dev/02_mysql_project/master/img/02_mysql_project_db_schema_01.png)
 
 #### Non-related tables
-The 2nd scheme show the tables thar are not related with each other in the database, these have as main function to backup all the data from the related tables.
+The 2nd schema show the tables thar are not related with each other in the database, these have as main function to backup all the data from the related tables.
 
-![02 scheme](https://raw.githubusercontent.com/davidlozada-dev/02_mysql_project/master/img/02_MySQL_Project_DB_Scheme_02.png)
+![02 schema](https://raw.githubusercontent.com/davidlozada-dev/02_mysql_project/master/img/02_mysql_project_db_schema_02.png)
 
 ## 2 Technical aspects
 
