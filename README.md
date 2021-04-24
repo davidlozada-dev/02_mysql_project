@@ -18,7 +18,7 @@ __Project's status: *finished*__ :heavy_check_mark:
 
 	2.[View](#22-View)
 
-1. [Contributor](#Contributor)
+1. [Contributor](#3-Contributor)
 
 ## 1 Introduction
 
