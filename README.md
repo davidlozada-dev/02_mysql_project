@@ -24,12 +24,7 @@ __Project's status: *finished*__ :heavy_check_mark:
 
 ### 1.1 Motivation behind the project
 	
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui of
+This project's main purpose is to put into practice SQL structures such as triggers and views, by taking a fictitious car dealearship case whose relational database schemas that must be followed are sketched with the designing tool __Dia__. To spice things up, all the  SQL statements are created and run in the __MySQL Command-Line__ and the resulting database is exported as a SQL file with __HeidiSQL__. 
 
 #### Technologies/tools used for this project
 	
