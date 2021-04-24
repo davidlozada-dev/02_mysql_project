@@ -44,6 +44,8 @@ This project's main purpose is to put into practice SQL structures such as trigg
 
 1. The __primary key column names__ use as default name "ID" followed by an underscore and then the first three letters of the table's name where each primary key column belongs to.
 
+	>E.g.: *__ID_use__*. This is a primary key column that belongs to a table called "users".
+	
 ### 1.3 Database schemas 
 #### Related tables
 The 1st schema shows the tables that are in the database and how they are related to each other through one-to-many relationships.
