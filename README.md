@@ -6,7 +6,9 @@
 
 	1.[Motivation behind the project](#11-Motivation-behind-the-project)
 
-	2.[Database schemas](#12-Database-schemas )
+	2.[Naming convention](#12-Naming-convention)
+
+	3.[Database schemas](#13-Database-schemas )
 
 1. [Technical aspects](#2-Technical-aspects)
 
@@ -27,7 +29,21 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui of
 
-### 1.2 Database schemas 
+### 1.2 Naming convention
+
+1. The __table names__ are in plural and lowercase. 
+	
+	>E.g: *__users__*.
+
+1. The __column names__ are fully human-readable, in order to make that possible the names use camelCase naming practice followed by an underscore and then the first three letters of the table's name where each column belongs to. 
+	
+	>E.g: *__userName_use__*. This is a column that belongs to a table called "users".
+
+1. The __primary key column names__ use as default name "ID" followed by an underscore and then the first three letters of the table's name where each primary key column belongs to.
+
+	>E.g.: *__ID_use__*. This is a primary key column that belongs to a table called "users".
+
+### 1.3 Database schemas 
 #### Related tables
 The 1st schema shows the tables that are in the database and how they are related to each other through one-to-many relationships.
 
