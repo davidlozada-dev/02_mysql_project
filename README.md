@@ -18,7 +18,7 @@ __Project's status: *finished*__ :heavy_check_mark:
 
 	2.[View](#22-View)
 
-1. [Contributors](#Contributors)
+1. [Contributor](#Contributor)
 
 ## 1 Introduction
 
@@ -199,6 +199,6 @@ CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `bills_view` AS select `o`.
 
 --- 
 
-## 3 Contributors
+## 3 Contributor
 
 Copyright © 2021 __David Lozada__
