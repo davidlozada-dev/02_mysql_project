@@ -35,13 +35,11 @@ proident, sunt in culpa qui of
 	
 	>E.g: *__users__*.
 
-1. The __column names__ are fully human-readable, in order to make that possible the names use camelCase naming practice followed by an underscore and then the first three letters of the table's name where each column belongs to. 
+1. The __column names__ are fully human-readable, in order to make that possible the names are in singular and use camelCase naming practice followed by an underscore and then the first three letters of the table's name where each column belongs to. 
 	
 	>E.g: *__userName_use__*. This is a column that belongs to a table called "users".
 
 1. The __primary key column names__ use as default name "ID" followed by an underscore and then the first three letters of the table's name where each primary key column belongs to.
-
-	>E.g.: *__ID_use__*. This is a primary key column that belongs to a table called "users".
 
 ### 1.3 Database schemas 
 #### Related tables
