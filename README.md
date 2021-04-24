@@ -1,5 +1,7 @@
 # 02_mysql_project
 
+__Project's status: *finished*__ :heavy_check_mark:
+
 ## Index
 
 1. [Introduction](#1-Introduction)
@@ -28,6 +30,12 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui of
+
+#### Technologies/tools used for this project
+	
+	1. Dia
+	2. HeidiSQL
+	3. MySQL
 
 ### 1.2 Naming convention
 
