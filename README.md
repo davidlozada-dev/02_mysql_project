@@ -47,12 +47,15 @@ This project's main purpose is to put into practice SQL structures such as trigg
 	>E.g.: *__ID_use__*. This is a primary key column that belongs to a table called "users".
 	
 ### 1.3 Database schemas 
+
 #### Related tables
+
 The 1st schema shows the tables that are in the database and how they are related to each other through one-to-many relationships.
 
 ![01 schema](https://raw.githubusercontent.com/davidlozada-dev/02_mysql_project/master/img/02_mysql_project_db_schema_01.png)
 
 #### Non-related tables
+
 The 2nd schema show the tables thar are not related with each other in the database, these have as main function to backup all the data from the related tables.
 
 ![02 schema](https://raw.githubusercontent.com/davidlozada-dev/02_mysql_project/master/img/02_mysql_project_db_schema_02.png)
